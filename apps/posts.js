@@ -5,10 +5,12 @@ import {
   Text,
   View,
   ListView,
-  Image,
   RefreshControl,
   TouchableOpacity
 } from 'react-native';
+
+import Image from 'react-native-image-progress';
+import Progress from 'react-native-progress';
 
 export default class Post extends Component {
     ds;
@@ -132,6 +134,7 @@ export default class Post extends Component {
                             <Image
                                 style={{height: 300, flex: 1, resizeMode: 'cover'}}
                                 source={{uri: rowData.photos[0].original_size.url}} 
+                                indicator={Progress}
                             />
                             {
                                 elLike
